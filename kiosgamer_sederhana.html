@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOSSSTORE.co.id- Top-Up Game Murah & Resmi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .adjustable-logo {
+      max-width: 60px; height: auto; display: block;
+      margin: 0 auto; border-radius: 8px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .step-label {
+      display: flex; align-items: center; justify-content: center;
+      width: 25px; height: 25px; background: red; color: white;
+      font-weight: bold; font-size: 0.7rem;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
+      border-radius: 2.5px; position: absolute; left: 0; top: 0.6em;
+    }
+    h2 {
+      display: block; position: relative; padding-left: 50px;
+      font-size: 1.2rem; margin-bottom: 20px;
+    }
+    .game-item {
+  position: relative;
+  overflow: hidden;
+  width: 92px;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  text-align: center;
+  font-size: 0.75rem;
+  border: 1px solid #ddd;
+  margin: 6px;
+  border-radius: 6px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 0;
+  border-radius: 6px;
+}
+
+.game-item img,
+.game-item span {
+  position: relative;
+  z-index: 1;
+}
+
+.game-item.selected {
+  border: 2px solid #e41e26;
+  box-shadow: 0 0 0 2px rgba(228, 30, 38, 0.3);
+  border-radius: 6px;
+  z-index: 2;
+}
+    .game-grid {
+      display: flex; justify-content: flex-start; align-items: stretch;
+      flex-wrap: nowrap; overflow-x: auto; gap: 16px;
+      padding-left: 20px; margin-bottom: 20px;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    }
+    .game-grid::-webkit-scrollbar { display: none; }
+    $1
+  box-sizing: border-box;
+  margin: 2px;
+    .id-form input, .id-form button,
+    .payment-grid img, .footer,
+    .header-top img, .header-title { border-radius: 8px; }
+    .id-form {
+      display: flex; align-items: center; gap: 0;
+      margin-top: 15px; justify-content: flex-start;
+    }
+
+    .game-item1 {
+  position: relative;
+  overflow: hidden;
+  width: 92px;
+  height: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  text-align: center;
+  font-size: 0.75rem;
+  border: 1px solid #ddd;
+  margin: 6px;
+  border-radius: 6px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.game-item1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 0;
+  border-radius: 6px;
+}
+
+.game-item1 img,
+.game-item span {
+  position: relative;
+  z-index: 1;
+}
+
+.game-item1.selected {
+  border: 2px solid #e41e26;
+  box-shadow: 0 0 0 2px rgba(228, 30, 38, 0.3);
+  border-radius: 6px;
+  z-index: 2;
+}
+    .game-grid1 {
+      display: flex; justify-content: flex-start; align-items: stretch;
+      flex-wrap: nowrap; overflow-x: auto; gap: 16px;
+      padding-left: 20px; margin-bottom: 20px;
+      scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    }
+    
+    .game-grid1::-webkit-scrollbar { display: none; }
+   $1
+  box-sizing: border-box;
+  margin: 2px;
+    .id-form input, .id-form button,
+    .payment-grid img, .footer,
+    .header-top img, .header-title { border-radius: 8px; }
+    .id-form {
+      display: flex; align-items: center; gap: 0;
+      margin-top: 15px; justify-content: flex-start;
+    }
+    .form-section { text-align: left; padding-left: 20px; }
+    .id-form input {
+      padding: 10px; border: 1px solid #ccc; border-right: none;
+      border-radius: 8px 0 0 8px; outline: none; font-size: 1rem;
+    }
+    .id-form button {
+      padding: 10px 20px; background-color: #e41e26; color: white;
+      border: 1px solid #e41e26; border-radius: 0 8px 8px 0;
+      cursor: pointer; font-weight: bold; font-size: 1rem;
+      transition: background-color 0.2s;
+    }
+    .id-form button:hover { background-color: #c91a21; }
+  </style>
+</head>
+<body>
+  <header class="header" style="position: sticky; top: 0; background: white; z-index: 1000; border-bottom: 1px solid #eee;">
+    <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 20px;">
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <img src="garena.png" alt="Garena Logo" class="logo adjustable-logo" style="margin: 0; max-height: 40px;">
+        <div style="width: 1px; height: 24px; background-color: #ddd;"></div>
+        <div class="header-title">
+          <p style="margin: 0; font-weight: 500; font-size: 1rem;">Top-up Resmi Joss Store</p>
+        </div>
+      </div>
+      <div class="profile-icon" style="width: 36px; height: 36px; border-radius: 50%; background: #f2f2f2; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+        <img src="profile.png" alt="Profil" style="width: 20px; height: 20px;">
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="game-selection" style="background: url('background.jpg') no-repeat center center / cover; padding: 20px 0;">
+      
+     
+      <div class="game-grid" style="overflow-x: auto; padding-bottom: 20px; padding-top: 10px; padding-inline: 16px; box-sizing: content-box;">
+        <div class="game-item">
+          <img src="game1.png" alt="Free Fire" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Free Fire</span>
+        </div>
+        <div class="game-item">
+          <img src="game2.png" alt="AOV" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Arena of Valor</span>
+        </div>
+        <div class="game-item">
+          <img src="game3.png" alt="CODM" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Call of Duty</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="game4.png" alt="Undawn" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Undawn</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="game5.png" alt="Speed Drifters" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          
+          <span>Speed Drifters</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="game6.png" alt="Delta Force" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Delta Force</span>
+        </div>
+        </div>
+      <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const grids = document.querySelectorAll('.game-grid');
+    
+    grids.forEach(grid => {
+      const items = grid.querySelectorAll('.game-item');
+
+      if (items.length) {
+        grid.addEventListener('scroll', () => {
+          const gridRect = grid.getBoundingClientRect();
+          items.forEach(item => {
+            const itemRect = item.getBoundingClientRect();
+            const itemCenter = itemRect.left + itemRect.width / 2;
+            const gridCenter = gridRect.left + gridRect.width / 2;
+            const distance = Math.abs(gridCenter - itemCenter);
+            const scale = Math.max(1, 1.15 - distance / 300);
+            item.style.transform = `scale(${scale})`;
+          });
+        });
+
+        items.forEach(item => {
+          item.addEventListener('click', () => {
+            items.forEach(i => i.classList.remove('selected'));
+            item.classList.add('selected');
+          });
+        });
+      }
+    });
+
+    // Untuk game-grid1 (metode pembayaran), tetap pakai selected tapi tanpa efek scroll/scale
+    const paymentItems = document.querySelectorAll('.game-grid1 .game-item1');
+    paymentItems.forEach(item => {
+      item.addEventListener('click', () => {
+        paymentItems.forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+      });
+    });
+  });
+      </script>
+    </section>
+  <section class="form-section">
+  <h2><span class="step-label">1</span> Login</h2>
+  <div style="border: 1px solid #e6e6e6; border-radius: 12px; padding: 16px; background: #f9f9f9; box-shadow: 0 1px 3px rgba(0,0,0,0.05); max-width: 420px;">
+    <div style="font-size: 0.875rem; color: #333; margin-bottom: 10px;">Player ID ?</div>
+    <form class="id-form">
+      <input type="text" placeholder="Masukkan ID Pengguna" required />
+      <button type="submit">Cek ID</button>
+    </form>
+    <div style="display: flex; align-items: center; gap: 12px; font-size: 0.875rem; color: #666; margin-top: 12px;">
+      <span>Atau login dengan platform ini</span>
+      <div style="display: flex; gap: 10px;">
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #1877F2; display: flex; align-items: center; justify-content: center;">
+          <img src="platform1.png" alt="Platform 1" style="width: 20px; height: 20px; filter: brightness(1.2);">
+        </div>
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #f1f1f1; display: flex; align-items: center; justify-content: center;">
+          <img src="platform2.webp" alt="Platform 2" style="width: 20px; height: 20px;">
+        </div>
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #f1f1f1; display: flex; align-items: center; justify-content: center;">
+          <img src="platform3.png" alt="Platform 3" style="width: 20px; height: 20px;">
+        </div>
+        <div style="width: 36px; height: 36px; border-radius: 50%; background: #1877F2; display: flex; align-items: center; justify-content: center;">
+          <img src="platform4.png" alt="Platform 4" style="width: 20px; height: 20px; filter: brightness(1.2);">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2><span class="step-label">2</span> Nominal Top Up</h2>
+  <div style="padding-left: 20px;">
+    <select style="padding: 10px; font-size: 1rem; border-radius: 8px; border: 1px solid #ccc;">
+      <option value="">Pilih Nominal</option>
+      <option value="5">5 Diamond</option>
+      <option value="12">12 Diamond</option>
+      <option value="50">50 Diamond</option>
+      <option value="70">70 Diamond</option>
+      <option value="140">140 Diamond</option>
+      <option value="355">355 Diamond</option>
+      <option value="720">720 Diamond</option>
+      <option value="1450">1.450 Diamond</option>
+      <option value="2180">2.180 Diamond</option>
+      <option value="3640">3.640 Diamond</option>
+      <option value="7290">7.290 Diamond</option>
+      <option value="36500">36.500 Diamond</option>
+      <option value="73100">73.100 Diamond</option>
+    </select>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2><span class="step-label">3</span> Metode Pembayaran</h2>
+  
+
+
+        
+      
+  </div>
+  
+</section>
+  <main class="main-content">
+    <section class="game-selection" style="background: url('background.jpg') no-repeat center center / cover; padding: 20px 0;">
+
+      <div class="game-grid" style="overflow-x: auto; padding-bottom: 20px; padding-top: 10px; padding-inline: 16px; box-sizing: content-box;">
+        <div class="game-item">
+          <img src="metode1.png" alt="Dana" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Dana</span>
+        </div>
+        <div class="game-item">
+          <img src="metode2.png" alt="Gopay" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Gopay</span>
+        </div>
+        <div class="game-item">
+          <img src="metode3.png" alt="Shopee Pay" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Shopee Pay</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="metode4.png" alt="Shell" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Shell</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="metode5.png" alt="XL" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          
+          <span>XL</span>
+        </div>
+        
+        <div class="game-item">
+          <img src="metode6.png" alt="Qris" style="width: 80px; height: 80px; object-fit: cover; border-radius: 12px;">
+          <span>Qris</span>
+        </div>
+        
+</main>
+
+<footer class="footer" style="background-color: #f9f9f9; border-top: 1px solid #e0e0e0; padding: 20px 0; margin-top: 40px; font-size: 0.85rem; color: #666; text-align: center;">
+  <p style="margin-bottom: 10px;">© Joss Mighty. All rights reserved.</p>
+  <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+    <a href="#" style="color: #666; text-decoration: none;">FAQ</a>
+    <a href="#" style="color: #666; text-decoration: none;">Pusat Bantuan</a>
+    <a href="#" style="color: #666; text-decoration: none;">Syarat dan Ketentuan</a>
+    <a href="#" style="color: #666; text-decoration: none;">Kebijakan Privasi</a>
+  </div>
+</footer>
+
+</body>
+</html>
